@@ -74,6 +74,7 @@ function Newspage() {
                  ))
             )}
         </div>
+        <div>
         <ReactPaginate
           nextLabel=">>"
           previousLabel="<<"
@@ -87,6 +88,7 @@ function Newspage() {
           previousClassName='previous-page'
           nextClassName='next-page'
         />
+        </div>
     </div>
   );
 }

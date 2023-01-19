@@ -6,9 +6,11 @@ body {
 .container{
   max-width:960 px;
   margin: 0 auto;
+  flex-direction: column;
 }
 .news-container{
   margin-top:30px;
+  margin-bottom: 50px;
 }
 
 .container h1{
@@ -54,7 +56,7 @@ form input:focus{
   align-items:center;
   background-color:#f7f7f7;
   width: 100%;
-  padding: 20px 10px;
+  padding: 5px 10px;
   margin:0;
   list-style: none;
 }
@@ -70,7 +72,7 @@ form input:focus{
   /* background-color: #fff; */
   color: #1c1e29;
   text-decoration: none;
-  padding: 10px 12px;
+  padding: 12px 12px;
 }
 
 .Pagination a:hover{
