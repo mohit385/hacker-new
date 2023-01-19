@@ -11,7 +11,11 @@ const NewsCard = ({article}) => {
     if(!article.title) return null;
   return (
     <Box className='news-card' sx={{width:'75%', pl: 3, pb:2}} >
-        <Card variant='outlined'>
+        <Card variant='outlined' sx={{
+    ':hover': {
+      boxShadow: 20, // theme.shadows[20]
+    },
+  }}>
         <React.Fragment>
       <CardContent>
         <Typography  variant="h6" color="text.primary" gutterBottom>
