@@ -18,7 +18,6 @@ function Newspage() {
   const [currentPage, setCurrentPage] = useState(0);
   const [query, setQuery] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const [category, setCategory] = useState("All");
 
   const handlePageChange = (event) => {
     console.log(event);
@@ -56,7 +55,6 @@ function Newspage() {
   };
 
   const handleCategoryChange = (event) => {
-    setCategory(getTagValue(event.target.value));
     tags.category = getTagValue(event.target.value);
     loadResults(popularitySort);
   };
@@ -73,7 +71,7 @@ function Newspage() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(
-          "http://hn.algolia.com/api/v1/" + sort + "?",
+          "https://hn.algolia.com/api/v1/" + sort + "?",
           {
             params: {
               page: currentPage,
