@@ -102,29 +102,21 @@ function Newspage() {
     loadResults(true);
   }, [currentPage, query]);
 
+  
   return (
     <div className="container">
       <h1>HackerNews</h1>
-      <form className="search-form" onSubmit={handleSubmit}>
-        <div>
-          <input
-            placeholder="Search for the news"
-            value={searchInput}
-            onChange={(event) => setSearchInput(event.target.value)}
-          />
-          <button type="submit">Search</button>
-        </div>
-      </form>
-      <div>
-        <button onClick={handleChangeSorting}>
+      <div className="navbar">
+      <div className="navleft">
+        <button className='damn' onClick={handleChangeSorting}>
           Sort by {popularitySort ? "Date" : "Popularity"}
         </button>
-        <select defaultValue={"All"} onChange={handleCategoryChange}>
+        <select className='damn'  defaultValue={"All"} onChange={handleCategoryChange}>
           <option value={"All"}>All</option>
           <option value={"Stories"}>Stories</option>
           <option value={"Comments"}>Comments</option>
         </select>
-        <select defaultValue={"All"} onChange={handleTimePeriodChange}>
+        <select className='damn' defaultValue={"All"} onChange={handleTimePeriodChange}>
           <option value={"All time"}>All time</option>
           <option value={"Last 24h"}>Last 24h</option>
           <option value={"Past Week"}>Past Week</option>
@@ -132,6 +124,18 @@ function Newspage() {
           <option value={"Past Year"}>Past Year</option>
         </select>
       </div>
+      <div className="navright">
+        <form className="search-form" onSubmit={handleSubmit}>
+          <input
+            placeholder="Search for the news"
+            value={searchInput}
+            onChange={(event) => setSearchInput(event.target.value)}
+          />
+          <button type="submit">Search</button>
+      </form>
+    </div>
+
+    </div>
       <div className="news-container">
         {isLoading ? (
           <p>Loading....</p>

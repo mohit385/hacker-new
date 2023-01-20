@@ -18,7 +18,10 @@ body {
   justify-content: center;
 }
 
-
+.navbar{
+  display: flex;
+  justify-content: space-around;
+}
 form{
   display: flex;
   justify-content: center;
@@ -36,7 +39,15 @@ form input {
 form input:focus{
   outline: none;
 }
-
+.damn{
+  width: 100px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #ccc;
+  color: #fff;
+}
  form button{
   width: 100px;
   margin-left: 10px;
