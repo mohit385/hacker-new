@@ -4,6 +4,22 @@ import axios from "axios";
 import NewsCard from "./components/NewsCard";
 import ReactPaginate from "react-paginate";
 import moment from "moment";
+import {
+  MDBContainer,
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarToggler,
+  MDBIcon,
+  MDBNavbarNav,
+  MDBNavbarItem,
+  MDBNavbarLink,
+  MDBBtn,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+  MDBCollapse,
+} from 'mdb-react-ui-kit';
 
 let tags = { author: null, category: null };
 let popularitySort = true;
@@ -104,13 +120,14 @@ function Newspage() {
 
   
   return (
-    <div className="container">
+    <div>
+      <MDBNavbar expand='lg' light bgColor='light'>
+      <MDBContainer fluid>
       <h1>HackerNews</h1>
-      <div className="navbar">
       <div className="navleft">
-        <button className='damn' onClick={handleChangeSorting}>
+        <MDBBtn className='mx-2' color='info' onClick={handleChangeSorting}>
           Sort by {popularitySort ? "Date" : "Popularity"}
-        </button>
+        </MDBBtn>
         <select className='damn'  defaultValue={"All"} onChange={handleCategoryChange}>
           <option value={"All"}>All</option>
           <option value={"Stories"}>Stories</option>
@@ -134,8 +151,8 @@ function Newspage() {
           <button type="submit">Search</button>
       </form>
     </div>
-
-    </div>
+    </MDBContainer>
+    </MDBNavbar>
       <div className="news-container">
         {isLoading ? (
           <p>Loading....</p>

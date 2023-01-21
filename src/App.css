@@ -4,9 +4,9 @@ body {
 }
 
 .container{
-  max-width:960 px;
-  margin: 0 auto;
-  flex-direction: column;
+  /* max-width:960 px; */
+  /* margin: 0 auto;
+  flex-direction: column; */
 }
 .news-container{
   margin-top:30px;
